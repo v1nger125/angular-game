@@ -1054,9 +1054,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.ctx = this.canvas.nativeElement.getContext('2d');
           this.gameArea = this.gs.initGame(this.areaSize);
-          this.homeImage.src = "/assets/house.png";
-          this.targetImage.src = "/assets/target.png";
-          this.playerImage.src = "/assets/player.png";
+          this.homeImage.src = "assets/house.png";
+          this.targetImage.src = "assets/target.png";
+          this.playerImage.src = "assets/player.png";
           this.bestScore = Number(localStorage.getItem("farmerScore")) || 0;
 
           window.onload = function () {
