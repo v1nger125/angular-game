@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="main_list">
+    <span class="main_list_text">Время игры(с)</span>
+    <input class="main_list_item main_list_timer" type="number" [formControl]="gameTimer" [ngClass]="{started:gameStarted}">
+    <span class="main_list_text">Размер поля</span>
+    <div class="main_list_item" *ngFor="let item of [4,8,16]" [ngClass]="{active:areaSize==item}" (click)="changeSize(item)">{{item}}</div>
+  </div>
+  <div class="main_canvas_wrapper">
+    <div class="main_canvas_header">
+      <span class="score header_item">Счет: {{ score }}</span>
+      <button class="start header_item" (click)="startGame()">Начать</button>
+      <span class="score header_item">Рекорд: {{ bestScore }}</span>
+    </div>
+    <canvas width="512" height="512" class="main_canvas" #canvas>Ваш браузер устарел</canvas>
+  </div>
+</div>
